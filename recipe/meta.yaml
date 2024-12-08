@@ -10,7 +10,7 @@ source:
   sha256: 0904ad4bba502944cc9f4cddff3043ffc18d9974df46d327d854ae5838c3d61f
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -20,7 +20,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('fortran') }}
   host:
-    - astropy
+    - astropy-base
     - f2c
     - numpy
     - pip
@@ -32,7 +32,7 @@ requirements:
     - scipy
     - setuptools
   run:
-    - astropy
+    - astropy-base
     - healpy
     - matplotlib-base
     - {{ pin_compatible('numpy') }}
